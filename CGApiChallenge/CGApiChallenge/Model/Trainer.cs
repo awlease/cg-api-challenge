@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace CGApiChallenge.Model
 {
@@ -10,9 +11,9 @@ namespace CGApiChallenge.Model
         public int Id { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
-        [JsonProperty("first_name")]
+        [JsonPropertyName("first_name")]
         public string FirstName { get; set; }
-        [JsonProperty("last_name")]
+        [JsonPropertyName("last_name")]
         public string LastName { get; set; }
     }
 }
